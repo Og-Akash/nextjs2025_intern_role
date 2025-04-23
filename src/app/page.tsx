@@ -6,11 +6,18 @@ import React from "react";
 
 const page = () => {
   return (
-    <div className="ml-[15rem] w-full">
-      <Header />
-      <Action />
-      <Tabs tabActive="All" />
-      <Content />
+    <div className="ml-[15rem] w-[calc(100%-15rem)] h-screen flex flex-col overflow-hidden">
+      
+      <div className="shrink-0">
+        <Header />
+        <Action />
+        <Tabs tabActive="All" />
+      </div>
+
+      {/* Scrollable card area only */}
+      <div className="flex-1 overflow-y-auto overflow-x-hidden">
+        <Content />
+      </div>
     </div>
   );
 };

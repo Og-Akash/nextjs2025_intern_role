@@ -5,12 +5,12 @@ import Button from "./ui/Button";
 import { SidebarLinkProps } from "@/types/sidebarlink";
 import { navLinks } from "@/constants/navLinks";
 import { NavLink } from "@/types/navLinks";
+import { useSidebar } from "@/context/SidebarContext";
 
 const SidebarContext = createContext<any | null>(null);
 
 const Sidebar = () => {
-  const [expanded, setExpanded] = useState(true);
-  const [activeTab, setActiveTab] = useState("content");
+  const { expanded, setActiveTab, activeTab,setExpanded } = useSidebar();
 
   return (
     <div
@@ -21,7 +21,7 @@ const Sidebar = () => {
       <div className="text-right h-fit absolute right-2 top-4">
         <Button
           className="cursor-pointer"
-          onClick={() => setExpanded((curr) => !curr)}
+          onClick={() => setExpanded((curr:string) => !curr)}
         >
           <img
             src={expanded ? "/Icons/arrowLeft.svg" : "/Icons/arrowRight.svg"}
@@ -40,7 +40,12 @@ const Sidebar = () => {
         >
           <div className="flex flex-col space-y-6">
             {navLinks.map((nav: NavLink) => (
-              <SidebarLink key={nav.label} icon={nav.icon} label={nav.label} link={nav.link} />
+              <SidebarLink
+                key={nav.label}
+                icon={nav.icon}
+                label={nav.label}
+                link={nav.link}
+              />
             ))}
           </div>
           <Button variant="secondary" className="flex items-center gap-2">

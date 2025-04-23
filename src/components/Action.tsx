@@ -1,13 +1,15 @@
 import React from "react";
 import Button from "./ui/Button";
 import SearchIcon from "./Icons/Search";
+import Calender from "./Icons/Calender";
+import Filter from "./Icons/Filter";
 
 const Action = () => {
   return (
     <div className="my-4 mx-8 h-20 shadow-sm bg-background rounded-lg">
       <div className="flex w-full items-center h-full justify-end p-4 gap-16">
-        <div className="flex gap-4">
-          <div className="flex border border-gray rounded-lg p-2 shadow-sm">
+        <div className="flex items-center gap-4">
+          <div className="flex  border border-gray rounded-lg p-2 shadow-sm">
             <SearchIcon className="mr-2" />
 
             <input
@@ -17,8 +19,12 @@ const Action = () => {
             />
           </div>
           <div className="space-x-4">
-            <Button className="bg-[#E7E8EF]">📆</Button>
-            <Button className="bg-[#E7E8EF]">📽️</Button>
+            <Button className="bg-[#E7E8EF]">
+              <Calender />
+            </Button>
+            <Button className="bg-[#E7E8EF]">
+              <Filter />
+            </Button>
           </div>
         </div>
         <div>

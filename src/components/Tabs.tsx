@@ -13,6 +13,7 @@ const Tabs = ({ tabActive, onTabChange }: TabProps) => {
       {tabs.map((tab: Tab) => (
         <Button
           key={tab.name}
+          className="cursor-pointer"
         //   onClick={() => onTabChange(tab.name)}
           variant={tabActive === tab.name ? "active" : "notActive"}
         >
