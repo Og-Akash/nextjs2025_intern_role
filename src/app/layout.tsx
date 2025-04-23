@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Urbanist } from "next/font/google";
 import "./globals.css";
 import Sidebar from "@/components/Sidebar";
+import { SidebarContext } from "@/context/SidebarContext";
 
 const urbanist = Urbanist({
   subsets: ["latin"],
@@ -20,10 +21,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className={`${urbanist.className} antialiased`}>
-        <main className="flex w-screen overflow-y-hidden">
-          <Sidebar />
-          {children}
+      <body className={`${urbanist.className} antialiased `}>
+        <main className="flex w-screen ">
+          <SidebarContext>
+            <Sidebar />
+            {children}
+          </SidebarContext>
         </main>
       </body>
     </html>
