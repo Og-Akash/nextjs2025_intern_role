@@ -5,14 +5,27 @@
   --foreground: #171717;
 }
 
-@theme inline {
+@theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  /* Colors */
+  --color-active: #1C1442;
+  --color-notActive: #E7E8EF;
+  --color-secondary: #E8E9FF;
+  --color-gray: #A0A3BD;
+  --color-publish-text: #0DAD82;
+  --color-publish: #E4FFF8;
+  --color-created-text: #58A4FF;
+  --color-created: #DAF1FB;
+  --color-draft: #F4F4F4;
+  --color-dark: #212121;
+  --color-dark-100: #1C1D22;
+  --color-dark-50: #53545C;
 }
 
-@media (prefers-color-scheme: dark) {
+
+@media (prefers-color-scheme: light) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
@@ -22,5 +35,8 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+.publish-btn {
+  @apply bg-created text-created-text px-6 py-2 rounded-lg text-sm font-medium cursor-pointer transition-colors duration-100;
 }
