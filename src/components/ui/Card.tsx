@@ -25,7 +25,7 @@ const Card = ({ card }: { card: CardProps }) => {
         />
       </div>
       <div className="absolute right-4 top-2 flex gap-2 justify-end">
-        <span className="bg-white/80 inline-flex items-center  rounded-md p-1 gap-1">
+        <span className="bg-white/80 inline-flex items-center  rounded-md p-1 gap-1 text-dark">
           <Eye />
          {card.views}
         </span>
@@ -44,7 +44,7 @@ const Card = ({ card }: { card: CardProps }) => {
             View
           </Button>
           <Button className="text-center bg-[#f4f4f4]">
-            <Elipsis />
+            <Elipsis className="text-dark"/>
           </Button>
         </div>
       </div>

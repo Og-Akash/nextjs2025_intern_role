@@ -6,11 +6,12 @@ import { SidebarLinkProps } from "@/types/sidebarlink";
 import { navLinks } from "@/constants/navLinks";
 import { NavLink } from "@/types/navLinks";
 import { useSidebar } from "@/context/SidebarContext";
+import Panel from "./Icons/Panel";
 
 const SidebarContext = createContext<any | null>(null);
 
 const Sidebar = () => {
-  const { expanded, setActiveTab, activeTab,setExpanded } = useSidebar();
+  const { expanded, setActiveTab, activeTab, setExpanded } = useSidebar();
 
   return (
     <div
@@ -21,14 +22,9 @@ const Sidebar = () => {
       <div className="text-right h-fit absolute right-2 top-4">
         <Button
           className="cursor-pointer"
-          onClick={() => setExpanded((curr:string) => !curr)}
+          onClick={() => setExpanded((curr: string) => !curr)}
         >
-          <img
-            src={expanded ? "/Icons/arrowLeft.svg" : "/Icons/arrowRight.svg"}
-            alt="toggle"
-            width={25}
-            height={25}
-          />
+        <Panel /> 
         </Button>
       </div>
 

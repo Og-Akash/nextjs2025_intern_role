@@ -20,8 +20,6 @@ const Eye: React.FC<EyeProps> = ({
       fill="none"
       stroke="currentColor"
       stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
       className={className}
       {...props}
     >

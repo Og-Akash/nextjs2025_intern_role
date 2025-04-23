@@ -28,6 +28,13 @@
   --color-dark-50: #53545C;
 }
 
+@media (prefer-color-schema: dark) {
+  :root{
+    --background: #171717;
+    --foreground: #fffff;
+  }
+}
+
 
 .dark {
   --background: #0a0a0a;

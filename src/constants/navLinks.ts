@@ -1,15 +1,17 @@
 import { NavLink } from "@/types/navLinks";
 
-export const navLinks : NavLink[] = [
-  { icon: "/Icons/dashboard.svg", label: "Dashboard", link: "dashboard" },
-  { icon: "/Icons/content.svg", label: "Content", link: "content" },
-  { icon: "/Icons/user.svg", label: "User", link: "user" },
-  { icon: "/Icons/task.svg", label: "Task", link: "task" },
-  { icon: "/Icons/device.svg", label: "App/Web", link: "app/web" },
-  { icon: "/Icons/graph.svg", label: "Analytics", link: "analytics" },
-  { icon: "/Icons/media.svg", label: "Media", link: "media" },
-  { icon: "/Icons/cursor.svg", label: "Customize", link: "customize" },
-  { icon: "/Icons/bell.svg", label: "Notification", link: "notification" },
-  { icon: "/Icons/subscription.svg", label: "Subscription", link: "subscription" },
-  { icon: "/Icons/setting.svg", label: "Settings", link: "settings" },
+import { icons } from '@/constants/image';
+
+export const navLinks: NavLink[] = [
+  { icon: icons.dashboard, label: 'Dashboard', link: 'dashboard' },
+  { icon: icons.content, label: 'Content', link: 'content' },
+  { icon: icons.user, label: 'User', link: 'user' },
+  { icon: icons.task, label: 'Task', link: 'task' },
+  { icon: icons.device, label: 'App/Web', link: 'app/web' },
+  { icon: icons.analytics, label: 'Analytics', link: 'analytics' },
+  { icon: icons.media, label: 'Media', link: 'media' },
+  { icon: icons.customize, label: 'Customize', link: 'customize' },
+  { icon: icons.notification, label: 'Notification', link: 'notification' },
+  { icon: icons.subscription, label: 'Subscription', link: 'subscription' },
+  { icon: icons.settings, label: 'Settings', link: 'settings' },
 ];
