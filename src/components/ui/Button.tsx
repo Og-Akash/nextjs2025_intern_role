@@ -1,7 +1,7 @@
 import React from "react";
 import { cn } from "@/utils/cn";
 
-type ButtonVariants = "default" | "active" | "notActive" | "secondary" | "gray" | "publish";
+export type ButtonVariants = "default" | "active" | "notActive" | "created" | "draft" | "secondary" | "gray" | "publish";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: ButtonVariants;
@@ -20,7 +20,9 @@ const Button: React.FC<ButtonProps> = ({
     notActive: "bg-[var(--color-notActive)] text-[var(--foreground)]",
     secondary: "bg-[var(--color-secondary)] text-[var(--color-active)]",
     gray: "bg-[var(--color-gray)] text-white",
-    publish: "bg-[#E4FFF8] text-[#0DAD82]"
+    publish: "bg-[#E4FFF8] text-[#0DAD82]",
+    created: "bg-[var(--color-created)] text-[var(--color-created-text)]",
+    draft: "bg-[var(--color-draft)] text-[var(--color-gray)]",
   };
 
   return (

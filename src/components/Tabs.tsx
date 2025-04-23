@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import React from "react";
 import Button from "./ui/Button";
@@ -8,19 +8,32 @@ import { Tab } from "@/types/tabs";
 type TabProps = { tabActive: string; onTabChange?: (name: string) => void };
 
 const Tabs = ({ tabActive, onTabChange }: TabProps) => {
+
   return (
     <div className="flex gap-4 items-center p-2 my-4 mx-6">
-      {tabs.map((tab: Tab) => (
-        <Button
-          key={tab.name}
-          className="cursor-pointer"
-        //   onClick={() => onTabChange(tab.name)}
-          variant={tabActive === tab.name ? "active" : "notActive"}
-        >
-           <span>{tab.name}</span>
-           <span className="text-gray">{`(${tab.value})`}</span>
-        </Button>
-      ))}
+      {tabs.map((tab: Tab) =>
+        tab.name === tabActive ? (
+          <Button
+            key={tab.name}
+            className="cursor-pointer text-white"
+            //   onClick={() => onTabChange(tab.name)}
+            variant="active"
+          >
+            <span>{tab.name}</span>
+            <span>{`(${tab.value})`}</span>
+          </Button>
+        ) : (
+          <Button
+            key={tab.name}
+            className="cursor-pointer"
+            //   onClick={() => onTabChange(tab.name)}
+            variant="notActive"
+          >
+            <span className="text-dark">{tab.name}</span>
+            <span className="text-gray">{`(${tab.value})`}</span>
+          </Button>
+        )
+      )}
     </div>
   );
 };

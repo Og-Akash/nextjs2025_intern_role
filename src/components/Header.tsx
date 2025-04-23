@@ -1,7 +1,10 @@
 import Image from "next/image";
 import React from "react";
+import ThemeToggleButton from "./ui/Toggler";
+
 
 const Header = () => {
+
   return (
     <header className="h-20 shadow-sm w-full">
       <div className="flex h-full justify-between mx-8 items-center">
@@ -14,6 +17,7 @@ const Header = () => {
           />
           <span className="font-semibold text-lg">Stories</span>
         </div>
+          <ThemeToggleButton />
         <div className="max-w-60 w-full flex justify-between items-center bg-[#fcfcfd] p-2 border border-[#E8EFF7] rounded-md">
           <div className="flex-1 flex gap-2">
             <Image

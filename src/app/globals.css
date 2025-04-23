@@ -5,6 +5,10 @@
   --foreground: #171717;
 }
 
+* {
+  transition: all 0.3s;
+}
+
 @theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -25,11 +29,9 @@
 }
 
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
 }
 
 body {
@@ -39,4 +41,12 @@ body {
 
 .publish-btn {
   @apply bg-created text-created-text px-6 py-2 rounded-lg text-sm font-medium cursor-pointer transition-colors duration-100;
+}
+
+.card {
+  @apply w-full h-[31rem] rounded-lg flex justify-center items-center bg-background bg-top text-foreground
+}
+
+.card-content {
+  @apply absolute bg-gradient-to-t from-dark via-dark-100/60 to-transparent bottom-4 w-full h-60 flex flex-col justify-end gap-3 px-2
 }

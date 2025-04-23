@@ -3,6 +3,7 @@ import { Urbanist } from "next/font/google";
 import "./globals.css";
 import Sidebar from "@/components/Sidebar";
 import { SidebarContext } from "@/context/SidebarContext";
+import { ThemeProvider } from "@/context/ThemeContext";
 
 const urbanist = Urbanist({
   subsets: ["latin"],
@@ -23,10 +24,12 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body className={`${urbanist.className} antialiased `}>
         <main className="flex w-screen ">
-          <SidebarContext>
-            <Sidebar />
-            {children}
-          </SidebarContext>
+          <ThemeProvider>
+            <SidebarContext>
+              <Sidebar />
+              {children}
+            </SidebarContext>
+          </ThemeProvider>
         </main>
       </body>
     </html>
