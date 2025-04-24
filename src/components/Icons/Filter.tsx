@@ -6,7 +6,6 @@ interface FilterProps extends React.SVGProps<SVGSVGElement> {
 
 const Filter: React.FC<FilterProps> = ({
   size = 22,
-  className,
   ...props
 }) => {
   return (
