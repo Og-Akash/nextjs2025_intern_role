@@ -9,7 +9,7 @@ const Filter: React.FC<FilterProps> = ({
   ...props
 }) => {
   return (
-    <svg
+  <svg
       width={size}
       height={size}
       viewBox="0 0 26 26"

@@ -58,5 +58,5 @@ body {
 }
 
 .card-content {
-  @apply absolute bg-gradient-to-t from-dark via-dark-100/60 to-transparent bottom-4 w-full h-60 flex flex-col justify-end gap-3 px-2
+  @apply absolute bottom-0 bg-gradient-to-t from-dark via-dark-100/60 to-transparent w-full h-60 flex flex-col justify-end gap-3 px-2
 }

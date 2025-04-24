@@ -21,7 +21,7 @@ const Sidebar = () => {
     >
       {/* Only show toggle button on desktop */}
       {!isMobile && (
-        <div className="text-right h-fit absolute right-2 top-4">
+        <div className="hidden md:block text-right h-fit absolute right-2 top-4">
           <Button
             className="cursor-pointer"
             onClick={() => setExpanded((curr: boolean) => !curr)}

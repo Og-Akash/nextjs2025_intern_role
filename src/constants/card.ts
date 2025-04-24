@@ -8,7 +8,7 @@ export const cardData: CardProps[] = [
     date: "20 Sep 2022",
     status: "Published",
     views: 428,
-    image: "/images/c1.jpg",
+    image: "/Images/c1.jpg",
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ export const cardData: CardProps[] = [
     date: "20 Sep 2022",
     status: "Created",
     views: 438,
-    image: "/images/c2.jpg",
+    image: "/Images/c2.jpg",
   },
   {
     id: 3,
@@ -26,7 +26,7 @@ export const cardData: CardProps[] = [
     date: "20 Sep 2022",
     status: "Draft",
     views: 1628,
-    image: "/images/c3.jpg",
+    image: "/Images/c3.jpg",
   },
   {
     id: 4,
@@ -35,7 +35,7 @@ export const cardData: CardProps[] = [
     date: "20 Sep 2022",
     status: "Published",
     views: 158,
-    image: "/images/c4.jpg",
+    image: "/Images/c4.jpg",
   },
   {
     id: 5,
@@ -44,7 +44,7 @@ export const cardData: CardProps[] = [
     date: "18 Oct 2022",
     status: "Published",
     views: 372,
-    image: "/images/c3.jpg",
+    image: "/Images/c3.jpg",
   },
   {
     id: 6,
@@ -53,7 +53,7 @@ export const cardData: CardProps[] = [
     date: "15 Oct 2022",
     status: "Draft",
     views: 210,
-    image: "/images/c1.jpg",
+    image: "/Images/c1.jpg",
   },
   {
     id: 7,
@@ -62,7 +62,7 @@ export const cardData: CardProps[] = [
     date: "12 Oct 2022",
     status: "Created",
     views: 529,
-    image: "/images/c4.jpg",
+    image: "/Images/c4.jpg",
   },
   {
     id: 8,
@@ -71,7 +71,7 @@ export const cardData: CardProps[] = [
     date: "10 Oct 2022",
     status: "Published",
     views: 690,
-    image: "/images/c1.jpg",
+    image: "/Images/c1.jpg",
   },
   {
     id: 9,
@@ -80,7 +80,7 @@ export const cardData: CardProps[] = [
     date: "09 Oct 2022",
     status: "Created",
     views: 305,
-    image: "/images/c2.jpg",
+    image: "/Images/c2.jpg",
   },
   {
     id: 10,
@@ -89,6 +89,6 @@ export const cardData: CardProps[] = [
     date: "05 Oct 2022",
     status: "Published",
     views: 413,
-    image: "/images/c3.jpg",
+    image: "/Images/c3.jpg",
   },
 ];

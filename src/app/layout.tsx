@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className={`${urbanist.className} antialiased `}>
-        <main className="flex w-screen ">
+        <main className="flex w-screen h-screen">
           <ThemeProvider>
             <SidebarContext>
               <Sidebar />

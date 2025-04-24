@@ -1,5 +1,6 @@
 import { cardData } from "@/constants/card";
 import { CardProps } from "@/types/card";
+import { log } from "console";
 import { createContext, useContext, useEffect, useState } from "react";
 
 interface ContentContext {
@@ -8,11 +9,13 @@ interface ContentContext {
   filteredCards: CardProps[];
   handleActiveTab: (tab: string) => void;
   handleSearchQuery: (query: string) => void;
+  handleAddContent: (content: CardProps) => void;
 }
 
 const contentContext = createContext<ContentContext>({
   handleActiveTab: () => {},
   handleSearchQuery: () => {},
+  handleAddContent: () => {},
   searchQuery: "",
   activeTab: "All",
   filteredCards: [],
@@ -29,6 +32,15 @@ export function ContextContext({ children }: { children: React.ReactNode }) {
   const handleActiveTab = (tab: string) => {
     setActiveTab(tab);
   };
+
+  const handleAddContent = (content:CardProps) => {
+    const updatedContent = {
+      ...filteredCards,
+      content
+    }
+    console.log(content)
+    setFilteredCards(updatedContent)
+  }
 
   useEffect(() => {
     let result = [...cardData];
@@ -62,6 +74,7 @@ export function ContextContext({ children }: { children: React.ReactNode }) {
   return (
     <contentContext.Provider
       value={{
+        handleAddContent,
         handleActiveTab,
         handleSearchQuery,
         searchQuery,
