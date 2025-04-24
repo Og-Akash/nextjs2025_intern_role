@@ -18,7 +18,7 @@ const ArrowDown: React.FC<ArrowDownProps> = ({
       viewBox="0 0 16 10"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
+      strokeWidth="2"
       className={className}
       {...props}
     >

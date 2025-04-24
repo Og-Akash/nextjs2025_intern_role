@@ -4,19 +4,19 @@ import React from "react";
 import Button from "./ui/Button";
 import { tabs } from "@/constants/tabs";
 import { Tab } from "@/types/tabs";
+import { useContent } from "@/context/ContentContext";
 
-type TabProps = { tabActive: string; onTabChange?: (name: string) => void };
 
-const Tabs = ({ tabActive, onTabChange }: TabProps) => {
-
+const Tabs = () => {
+  const {activeTab,handleActiveTab} = useContent()
   return (
-    <div className="flex gap-4 items-center p-2 my-4 mx-6">
+    <div className="flex gap-4 items-center p-2 my-4 mx-6 overflow-x-auto">
       {tabs.map((tab: Tab) =>
-        tab.name === tabActive ? (
+        tab.name === activeTab ? (
           <Button
             key={tab.name}
             className="cursor-pointer text-white"
-            //   onClick={() => onTabChange(tab.name)}
+              onClick={() => handleActiveTab(tab.name)}
             variant="active"
           >
             <span>{tab.name}</span>
@@ -26,7 +26,7 @@ const Tabs = ({ tabActive, onTabChange }: TabProps) => {
           <Button
             key={tab.name}
             className="cursor-pointer"
-            //   onClick={() => onTabChange(tab.name)}
+              onClick={() => handleActiveTab(tab.name)}
             variant="notActive"
           >
             <span className="text-dark">{tab.name}</span>

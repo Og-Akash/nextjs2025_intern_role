@@ -5,7 +5,7 @@ import { useTheme } from "@/context/ThemeContext";
 const ThemeToggleButton = () => {
   const { theme, toggleTheme } = useTheme();
   return (
-    <Button onClick={toggleTheme} className="p-2 text-xl rounded border cursor-pointer">
+    <Button onClick={toggleTheme} className="p-2 text-lg lg:text-xl rounded border cursor-pointer">
       {theme === "light" ? "☀️" : "🌙"}
     </Button>
   );

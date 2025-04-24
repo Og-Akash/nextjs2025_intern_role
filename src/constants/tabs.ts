@@ -18,6 +18,10 @@ export const tabs: Tab[] = [
     value: "2,432",
   },
   {
+    name: "Created",
+    value: "500",
+  },
+  {
     name: "Archived",
     value: "320",
   },

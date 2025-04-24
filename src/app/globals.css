@@ -13,6 +13,9 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 
+  /* Breakpoints */
+  --breakpoint-xs: 580px;
+
   /* Colors */
   --color-active: #1C1442;
   --color-notActive: #E7E8EF;
