@@ -4,7 +4,7 @@ import Action from "@/components/Action";
 import Content from "@/components/Content";
 import Header from "@/components/Header";
 import Tabs from "@/components/Tabs";
-import { ContextContext, useContent } from "@/context/ContentContext";
+import { ContextContext } from "@/context/ContentContext";
 import { useSidebar } from "@/context/SidebarContext";
 import { useIsMobile } from "@/hooks/useMobile";
 import React, { useState } from "react";
@@ -15,8 +15,6 @@ const MainPageWrapper = () => {
   const { expanded } = useSidebar();
   const isMobile = useIsMobile();
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const { handleAddContent } = useContent();
-
   return (
     <div
       className={`${
@@ -36,7 +34,6 @@ const MainPageWrapper = () => {
           title="Add New Content"
         >
           <AddContentForm
-            onSubmit={handleAddContent}
             onClose={() => setIsModalOpen(false)}
           />
         </Modal>

@@ -9,7 +9,7 @@ export interface CardProps {
   title: string;
   category: string;
   date: string;
-  status: Status;
+  status: "Published" | "Created" | "Draft",
   views: number;
   image: string;
 }

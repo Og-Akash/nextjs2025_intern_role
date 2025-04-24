@@ -1,27 +1,22 @@
 import React, { useState } from 'react';
-import { CardProps, Status } from '@/types/card';
+import { CardProps } from '@/types/card';
 
 interface AddStoryFormProps {
-  onSubmit: (story: CardProps) => void;
   onClose: () => void;
 }
 
-const AddStoryForm: React.FC<AddStoryFormProps> = ({ onSubmit, onClose }) => {
+const AddStoryForm = ({onClose }:AddStoryFormProps) => {
   const [formData, setFormData] = useState({
     title: '',
     image: '',
     category: '',
-    status: 'Draft' as Status,
+    status: 'Draft',
     views: 0
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    const date = new Date().toLocaleDateString('en-US', {
-        day: '2-digit',
-        month: 'short',
-        year: 'numeric'
-      });
+
       onClose()
     alert("This is a Dummy Form")
   };

@@ -1,6 +1,5 @@
 import { cardData } from "@/constants/card";
 import { CardProps } from "@/types/card";
-import { log } from "console";
 import { createContext, useContext, useEffect, useState } from "react";
 
 interface ContentContext {

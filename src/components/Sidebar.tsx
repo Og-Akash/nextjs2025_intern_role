@@ -7,6 +7,7 @@ import { NavLink } from "@/types/navLinks";
 import { useSidebar } from "@/context/SidebarContext";
 import Panel from "./Icons/Panel";
 import { useIsMobile } from "@/hooks/useMobile";
+import Image from "next/image";
 
 const Sidebar = () => {
   const { expanded, setExpanded } = useSidebar();
@@ -46,7 +47,7 @@ const Sidebar = () => {
           ))}
         </div>
         <Button variant="secondary" className="flex items-center gap-2">
-          <img src="/Icons/contact.svg" alt="contact" width={20} height={20} />
+          <Image src="/Icons/contact.svg" alt="contact" width={20} height={20} />
           {expanded && !isMobile && "Contact Support"}
           {!expanded && (
             <div
@@ -78,7 +79,7 @@ function SidebarLink({ icon, label, link }: SidebarLinkProps) {
       className="text-sm cursor-pointer group flex items-center gap-2 relative"
       onClick={() => setActiveTab(link)}
     >
-      <img
+      <Image
         src={icon}
         alt={label}
         width={20}
