@@ -1,12 +1,10 @@
 import React from "react";
 
 interface GraphProps extends React.SVGProps<SVGSVGElement> {
-  strokeColor?: string;
   size?: string;
 }
 
 const Graph: React.FC<GraphProps> = ({
-  strokeColor = "#A0A3BD",
   size = 22,
   className = "",
   ...props

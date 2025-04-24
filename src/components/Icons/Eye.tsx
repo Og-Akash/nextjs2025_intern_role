@@ -1,12 +1,10 @@
 import React from "react";
 
 interface EyeProps extends React.SVGProps<SVGSVGElement> {
-  strokeColor?: string;
   size?: string;
 }
 
 const Eye: React.FC<EyeProps> = ({
-  strokeColor = "#A0A3BD",
   size = 22,
   className = "",
   ...props

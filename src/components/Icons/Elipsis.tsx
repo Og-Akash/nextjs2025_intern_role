@@ -1,12 +1,10 @@
 import React from "react";
 
 interface ElipsisProps extends React.SVGProps<SVGSVGElement> {
-  strokeColor?: string;
   size?: string;
 }
 
 const Elipsis: React.FC<ElipsisProps> = ({
-  strokeColor = "#A0A3BD",
   size = 22,
   className = "",
   ...props

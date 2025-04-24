@@ -43,13 +43,13 @@ export function ContextContext({ children }: { children: React.ReactNode }) {
 
     //* filter by search Query
     if (searchQuery) {
-      let query = searchQuery.trim().toLowerCase();
+      const query = searchQuery.trim().toLowerCase();
       timer = setTimeout(() => {
-        let filtered = (result = result.filter(
+        const filtered = result = result.filter(
           (d) =>
             d.title.toLowerCase().includes(query) ||
             d.category.toLowerCase().includes(query)
-        ));
+        );
         setFilteredCards(filtered);
       }, 500);
     } else {

@@ -1,12 +1,10 @@
 import React from "react";
 
 interface ArrowDownProps extends React.SVGProps<SVGSVGElement> {
-  strokeColor?: string;
   size?: string;
 }
 
 const ArrowDown: React.FC<ArrowDownProps> = ({
-  strokeColor = "#A0A3BD",
   size = 22,
   className = "",
   ...props

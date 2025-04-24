@@ -1,5 +1,5 @@
 "use client";
-import { useContext, createContext, useState, useEffect } from "react";
+import { useContext, createContext, useState } from "react";
 
 // Define proper type for the context
 interface SidebarContextType {

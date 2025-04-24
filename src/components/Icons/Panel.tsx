@@ -1,12 +1,10 @@
 import React from "react";
 
 interface PanelProps extends React.SVGProps<SVGSVGElement> {
-  strokeColor?: string;
   size?: string;
 }
 
 const Panel: React.FC<PanelProps> = ({
-  strokeColor = "#A0A3BD",
   size = 22,
   className = "",
   ...props

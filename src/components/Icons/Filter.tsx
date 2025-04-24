@@ -2,12 +2,10 @@ import React from "react";
 
 interface FilterProps extends React.SVGProps<SVGSVGElement> {
   size?: string;
-  strokeColor?: string;
 }
 
 const Filter: React.FC<FilterProps> = ({
   size = 22,
-  strokeColor = "#A0A3BD",
   className,
   ...props
 }) => {

@@ -1,12 +1,10 @@
 import React from "react";
 
 interface CalenderProps extends React.SVGProps<SVGSVGElement> {
-  strokeColor?: string;
   size?: string;
 }
 
 const Calender: React.FC<CalenderProps> = ({
-  strokeColor = "#A0A3BD",
   size = 22,
   className = "",
   ...props
